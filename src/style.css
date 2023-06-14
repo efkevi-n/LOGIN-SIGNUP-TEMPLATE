@@ -1,0 +1,253 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Hanken+Grotesk:wght@100;400;700&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+font-family: 'Hanken Grotesk', sans-serif;
+  }
+
+    a{
+      text-decoration: none;    
+    }
+
+  .header {
+    position: fixed;
+      width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    z-index: 100;
+  }
+
+  .hav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hav,
+  .havli {
+        display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .havli {
+    column-gap: 25px;
+  }
+
+  .havlink {
+    color: bisque;
+  }
+  .havlink:hover {
+    color: rgb(78, 159, 230);
+  }
+    
+  .button {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 5px;
+    padding: 6px 24px;
+  }
+
+  .button:active {
+    transform: scale(0.98);
+  }
+
+  .home {
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("pexels-hasan-albari-1229861.jpg");
+    background-position: center;
+  }
+
+  .home::before  {
+    content: '';
+    position: absolute;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.6);
+     z-index: 100;
+     opacity:0;
+     pointer-events: none;
+     transition: all 0.8s ease-out;
+  }
+
+  .home.show::before {
+    opacity: 1;
+    pointer-events:auto ;
+  }
+
+.container {
+    max-width: 350px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3 s ease-in;
+  }
+
+  .home.show .container{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+ 
+  .sign_form {
+    display: none;
+  }
+
+  .container.active .sign_form{
+    display: block;
+  }
+
+  .container.active .login_form{
+    display: none;
+  }
+  
+  .form_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: rgb(255, 0, 0);
+     font-size: 12px;
+    opacity:0.7;
+    cursor: pointer;
+  }
+
+  .container h3 {
+    text-align: center;
+    font-size:32px;
+  }
+
+  .inputbox {
+    margin-top:20px ;
+  position: relative;
+   height: 40px;
+   width: 100%;
+  }
+
+  .inputbox input {
+    text-align: center;
+    height: 100%;
+   width: 100%;
+    outline:none;
+    border: none;
+   transition: all 0.3s ease;
+    color: #333;
+    border-bottom: 1.8px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .inputbox input:focus {
+    outline: none;
+    border-color: brown;
+  }
+
+  .inputbox i{
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+  }
+
+  .inputbox i.email,
+  .inputbox i.password {
+    left: 0;
+    color: #707070;
+  }
+
+  .inputbox input:focus ~ i.email,
+  .inputbox input:focus ~ i.pw_hide  {
+   border-color: brown;
+  }
+
+  .inputbox i.pw_hide {
+    left: 0;
+    color: #707070;
+    font-size: 18px;
+   cursor: pointer;
+  }
+ 
+  .optionf {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .input {
+    display: flex;
+    column-gap: 6px;
+    font-size: 14px;
+  }
+
+  .input label {
+    cursor: pointer;
+  }
+
+  .input input {
+    accent-color: brown;
+  }
+
+  .container a {
+    font-size: 14px;
+  }
+
+  .container a:hover {
+    text-decoration: underline;
+  }
+
+  .b {
+
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #964B00;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .b:hover {
+    background-color: #7B3F00;
+  }
+  
+  .b:active {
+    background-color: #5C2E00;
+  }
+
+  .loginsig {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center ;
+    justify-content: space-between;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
